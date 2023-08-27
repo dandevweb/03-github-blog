@@ -1,10 +1,12 @@
-function App() {
+import { BrowserRouter } from 'react-router-dom'
+import './styles/global.css'
+import { Router } from './Router'
+
+export function App() {
 
   return (
-    <>
-      <h1>Github</h1>
-    </>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
-
-export default App
