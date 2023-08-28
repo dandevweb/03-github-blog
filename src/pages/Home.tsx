@@ -3,9 +3,9 @@ import { Profile } from "../components/Profile";
 
 export function Home() {
   return (
-    <div>
+    <main>
       <Profile />
       <Posts />
-    </div>
+    </main>
   )
 }

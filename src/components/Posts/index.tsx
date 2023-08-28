@@ -1,5 +1,5 @@
 import { SearchForm } from "./SearchForm";
-import { Post } from "./single";
+import { PostCard } from "./Card";
 
 export function Posts() {
   return (
@@ -11,12 +11,12 @@ export function Posts() {
       <SearchForm />
 
       <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2">
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
       </div>
     </div>
   )
