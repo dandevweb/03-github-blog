@@ -15,6 +15,7 @@ interface ProfileProps {
   followers: number;
   followers_url: string;
   organizations_url: string;
+  blog: string;
 }
 
 export function Profile() {
@@ -35,7 +36,6 @@ export function Profile() {
   }, []);
 
   if (!profile) {
-    // Mostrar algum indicador de carregamento
     return <div>Loading...</div>;
   }
 
@@ -50,7 +50,7 @@ export function Profile() {
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </div>
-        <p>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</p>
+        <p>{profile.bio}</p>
 
         <div className="flex w-full gap-4 pt-4">
           <a className="flex items-center" href={profile.html_url} target="_blank">
@@ -58,7 +58,7 @@ export function Profile() {
             {profile.login}
           </a>
 
-          <a className="flex items-center" href={profile.organizations_url} target="_blank">
+          <a className="flex items-center" href={profile.blog} target="_blank">
             <FontAwesomeIcon icon={faBuilding} className="p-2 text-theme-label" />
             {profile.company ?? 'Dandevweb'}
           </a>
