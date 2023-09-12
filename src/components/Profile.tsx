@@ -25,7 +25,6 @@ export function Profile() {
     try {
       const response = await api.get('user');
       setProfile(response.data);
-      console.log(response.data);
     } catch (error) {
       console.error('Erro ao obter o perfil do usuário:', error);
     }

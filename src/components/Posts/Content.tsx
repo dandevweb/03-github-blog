@@ -1,7 +1,13 @@
-export function PostContent() {
+import ReactMarkdown from "react-markdown";
+
+interface PostContentProps {
+  content: string;
+}
+
+export function PostContent({ content }: PostContentProps) {
   return (
     <div className="px-8 py-10 text-theme-text">
-      <div className="pb-5">
+      {/* <div className="pb-5">
         <p><strong>Programming languages all have built-in data structures, but these often differ from one language to another.</strong> This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.</p>
       </div>
 
@@ -24,7 +30,8 @@ export function PostContent() {
             <span className="text-theme-label">     // foo is now a boolean</span>
           </code>
         </pre>
-      </div>
+      </div> */}
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   )
 }
